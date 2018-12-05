@@ -1,5 +1,18 @@
-body { background: black; color: white; }
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+body { background: #305c4f; color: white; font-family: 'Poppins', sans-serif; }
+
+body h1 { font-size: 50px; color: #60b89f; text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0, 0, 0, 0.2); }
 
 .hero-container { width: 100%; }
 
 .hero-container img { width: 100%; }
+
+.characters { display: flex; width: 100%; justify-content: space-evenly; }
+
+.characters .small-image { width: 400px; }
+
+.characters .small-image img { width: 100%; }
+
+.character a { color: #cd8376; text-decoration: none; }
+
+.character a:hover { text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0, 0, 0, 0.2); }

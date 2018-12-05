@@ -6,7 +6,7 @@
 
 <?php echo get_template_part('includes/content', 'home') ?>
 
-<?php echo get_template_part('includes/home', 'characters') ?>
+<?php echo get_template_part('includes/content', 'characters') ?>
 
 <?php echo get_template_part('includes/content', 'books') ?>
 

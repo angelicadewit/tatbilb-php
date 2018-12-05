@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 body{
-    background: black;
+    background: #305c4f;
     color: white;
+    font-family: 'Poppins', sans-serif;
+    
+    h1{
+        font-size: 50px;
+        color: #60b89f;
+        text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
+    }
 }
 
 .hero-container{
@@ -9,6 +18,29 @@ body{
 
     img{
         width: 100%;
-        
+    }
+}
+
+.characters{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
+    .small-image{
+        width: 400px;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.character{
+    a{
+        color: #cd8376;
+        text-decoration: none;
+
+        &:hover{
+            text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
+        }
     }
 }

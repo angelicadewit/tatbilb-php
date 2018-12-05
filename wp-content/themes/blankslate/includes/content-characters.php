@@ -1,4 +1,6 @@
+<h1>Characters</h1>
 <section class="characters">
+    
     <?php $args = array(
         "post_type" => "characters",
         "category_name" => get_field('characters_display_category'),
@@ -9,10 +11,13 @@
         // var_dump($args); die; 
         ?>
     
-        
-        <h1><a href="<?php the_permalink() ?>"><?php the_field('character_name') ?></a></h1>
+        <div class="character">
+            <h2 class="character-link"><a href="<?php the_permalink() ?>"><?php the_field('character_name') ?></a></h2>
+            <div class="small-image">
+                <img src="<?php the_field('actor_image')?>" alt="">
+            </div>
+        </div>
 
-        <img src="<?php the_field('actor_image')?>" alt="">
         
         
         
