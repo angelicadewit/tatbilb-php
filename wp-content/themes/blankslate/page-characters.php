@@ -4,6 +4,6 @@
 
 <?php get_header(); ?>
 
-<?php echo get_template_part('includes/contents', 'characters') ?>
+<?php echo get_template_part('includes/content', 'characters') ?>
 
 <?php get_footer(); ?>

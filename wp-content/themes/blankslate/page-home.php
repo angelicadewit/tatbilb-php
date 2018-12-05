@@ -6,4 +6,6 @@
 
 <?php echo get_template_part('includes/content', 'home') ?>
 
+<?php echo get_template_part('includes/content', 'characters') ?>
+
 <?php get_footer(); ?>
