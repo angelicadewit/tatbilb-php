@@ -1,0 +1,56 @@
+# Keep these files out of the repo
+/wp-content/themes/twenty*
+/wp-content/upgrade
+/wp-content/themes/blankslate/node_modules
+/wp-content/uploads
+/wp-content/cache/
+/sitemap.*
+/wp-config.php
+/wp-config-sample.php
+/wp-config.org.php
+*.sql
+.htaccess
+/license.txt
+/wp-includes/images/crystal/license.txt
+/wp-cron.php
+.revision
+hello-world.php
+php.ini
+readme*
+wordfence-waf.php
+wp-snapshots
+wp-content/wflogs*
+wp-content/wflogs
+wflogs
+node_modules
+
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+
+# Hidden files
+*.DS_Store
+*Thumbs.db
+*.sass-cache*
+*~imageoptim*
