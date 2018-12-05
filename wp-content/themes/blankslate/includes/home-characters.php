@@ -1,13 +1,11 @@
 <section class="characters">
     <?php $args = array(
         "post_type" => "characters",
-        "category_name" => get_field('characters_display_category'),
-        "posts_per_page" => -1,
+        "category_name" => "maincharacters",
+        "posts_per_page" => 2,
     );
     $query = new WP_Query($args);
-    if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); 
-        // var_dump($args); die; 
-        ?>
+    if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
     
         
         <h1><a href="<?php the_permalink() ?>"><?php the_field('character_name') ?></a></h1>

@@ -69,3 +69,4 @@ return $count;
 ?>
 
 <?php require get_template_directory() . '/functions/enqueues.php';?>
+<!-- <?php require get_template_directory() . '/functions/taxonomies.php';?> -->
