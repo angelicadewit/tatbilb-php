@@ -13,6 +13,10 @@ body h1 { font-size: 50px; color: #60b89f; text-shadow: 2px 2px 0px #305c4f, 5px
 
 .characters .small-image img { width: 100%; }
 
+.character h2 { padding: 20px; }
+
 .character a { color: #cd8376; text-decoration: none; }
 
 .character a:hover { text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0, 0, 0, 0.2); }
+
+.single-character h2 { text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0, 0, 0, 0.2); }
