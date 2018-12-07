@@ -1,6 +1,8 @@
-<h1>Characters</h1>
-<section class="characters">
+
+<section class="characters-section">
     
+<h1>Characters</h1>
+<div class="characters-row">
     <?php $args = array(
         "post_type" => "characters",
         "category_name" => get_field('characters_display_category'),
@@ -11,15 +13,17 @@
         
         ?>
     
-        <div class="character">
-            <h2 class="character-link"><a href="<?php the_permalink() ?>"><?php the_field('character_name') ?></a></h2>
-            <div class="small-image">
-                <img src="<?php the_field('actor_image')?>" alt="">
+            <div class="character">
+                <a href="<?php the_permalink() ?>">
+                    <h2 class="character-link"><?php the_field('character_name') ?></h2>
+                    <div class="small-image">
+                        <img src="<?php the_field('actor_image')?>" alt="">
+                    </div>
+                </a>
             </div>
-        </div>
 
         
         
-        
     <?php endwhile; wp_reset_postdata(); endif; ?>
+</div>
 </section>

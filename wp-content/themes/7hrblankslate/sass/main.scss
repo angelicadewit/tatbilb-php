@@ -1,6 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import url("https://use.typekit.net/phh5zva.css");
 
+$tablet-breakpoint: 640px;
+$desktop-breakpoint: 960px;
+
+
+@mixin tablet{
+	@media only screen and (min-width: $tablet-breakpoint){
+		@content;
+	}
+}
+
+@mixin desktop{
+	@media only screen and (min-width: $desktop-breakpoint){
+		@content;
+	}
+}
+
 @font-face {
     font-family: 'HaveHeartOne';
     src:url('fonts/HaveHeartOne.ttf') format('truetype'), url('fonts/HaveHeartOne.woff') format('woff'),url('fonts/HaveHeartOne.woff2') format('woff2');
@@ -14,7 +30,8 @@ body{
     font-family: 'Poppins', sans-serif;
     margin:0;
     padding:0;
-    
+
+
     h1{
         font-family: 'goodlife-brush', 'Poppins', sans-serif;
         font-size: 75px;
@@ -25,8 +42,8 @@ body{
     }
 }
 
-.hero-container{
 
+.hero-container{
     width: 100%;
 
     img{
@@ -34,10 +51,30 @@ body{
     }
 }
 
-.characters{
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
+.characters-section{
+    h1{
+        margin: 20px;
+        width: 100%;
+    }
+}
+
+.characters-row{
+
+    @include tablet{
+        display: flex;
+        width: 99%;
+        flex-wrap: wrap;
+        margin: auto;
+
+        & > div {
+            flex: 0 50%;
+            justify-content: space-around;
+        }
+    }
+
+    @include desktop{
+        justify-content: space-evenly;
+    }
 
     .small-image{
         width: 400px;
@@ -52,12 +89,13 @@ nav#menu{
     .menu-menu-1-container ul {
         list-style: none;
         display: flex;
-        flex-direction: column; 
+        flex-direction: row; 
     }
     
 }
 
 .character{
+    display: flex;
 
     h2{
         padding: 20px;
@@ -69,8 +107,17 @@ nav#menu{
 
         &:hover{
             text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
+            cursor: pointer;
         }
     }
+
+//     @include tablet{
+//         flex: 2
+//     };
+
+//     @include desktop{
+//         flex: 3;
+//     }
 }
 
 .single-character{

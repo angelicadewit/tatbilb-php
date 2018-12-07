@@ -10,18 +10,25 @@ body h1 { font-family: 'goodlife-brush', 'Poppins', sans-serif; font-size: 75px;
 
 .hero-container img { width: 100%; }
 
-.characters { display: flex; width: 100%; justify-content: space-evenly; }
+.characters-section h1 { margin: 20px; width: 100%; }
 
-.characters .small-image { width: 400px; }
+@media only screen and (min-width: 640px) { .characters-row { display: flex; width: 99%; flex-wrap: wrap; margin: auto; }
+  .characters-row > div { flex: 0 50%; justify-content: space-around; } }
 
-.characters .small-image img { width: 100%; }
+@media only screen and (min-width: 960px) { .characters-row { justify-content: space-evenly; } }
 
-nav#menu .menu-menu-1-container ul { list-style: none; display: flex; flex-direction: column; }
+.characters-row .small-image { width: 400px; }
+
+.characters-row .small-image img { width: 100%; }
+
+nav#menu .menu-menu-1-container ul { list-style: none; display: flex; flex-direction: row; }
+
+.character { display: flex; }
 
 .character h2 { padding: 20px; }
 
 .character a { color: #cd8376; text-decoration: none; }
 
-.character a:hover { text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0, 0, 0, 0.2); }
+.character a:hover { text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0, 0, 0, 0.2); cursor: pointer; }
 
 .single-character h2 { font-family: 'goodlife-brush', 'Poppins', sans-serif; color: #f38993; font-size: 60px; text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0, 0, 0, 0.2); }
