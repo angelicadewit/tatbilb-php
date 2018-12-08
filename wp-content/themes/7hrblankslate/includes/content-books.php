@@ -11,12 +11,10 @@
         $query = new WP_Query($args);
         if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
         
-        <div class="book">
-        <a href="<?php the_permalink() ?>">
-            <h2><?php the_field('book_title') ?></h2>
-
-            <img src="<?php the_field('book_image')?>" alt="">
-    </a>
+        <div class="book-home" style="background: url(<?php the_field('bookbg')?>)">
+            <a href="<?php the_permalink() ?>">
+                <img src="<?php the_field('book_image')?>" alt="">
+            </a>
         </div>
             
             

@@ -31,6 +31,7 @@ body{
     font-family: 'Poppins', sans-serif;
     margin:0;
     padding:0;
+    height: 100%;
 
 
     h1{
@@ -126,6 +127,7 @@ nav#menu{
     a{
         color: #f38993;
         text-decoration: none;
+        transition: 0.2s;
 
         &:hover{
             text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
@@ -227,6 +229,37 @@ nav#menu{
     
 }
 
-// .book{
-    
-// }
+.books-row{
+
+    @include tablet{
+        
+        & > div {
+            flex: 0 25%;
+            justify-content: space-around;
+            align-items: baseline;
+        }
+    }
+
+}
+
+.book-home{
+
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+    a{
+        color: #f38993;
+        text-decoration: none;
+        transition: 0.2s;
+
+        &:hover{
+            text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
+            cursor: pointer;
+        }
+    }
+
+    &:nth-child(2){
+        transform: rotate(-2.2deg);
+    }
+}
