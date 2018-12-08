@@ -12,11 +12,12 @@
         if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
         
         <div class="book">
-        <a href="<?php the_permalink() ?>">
             <h2><?php the_field('book_title') ?></h2>
 
             <img src="<?php the_field('book_image')?>" alt="">
-    </a>
+
+            <p><a href="<?php the_field('amazon_link')?>">Amazon</a></p>
+            <p><a href="<?php the_field('barnes_and_noble_link')?>">Barnes and Noble</a></p>
         </div>
             
             
