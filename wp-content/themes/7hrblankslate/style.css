@@ -4,7 +4,9 @@
 
 body { background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png"); background-color: #305c4f; color: white; font-family: 'Poppins', sans-serif; margin: 0; padding: 0; }
 
-body h1 { font-family: 'goodlife-brush', 'Poppins', sans-serif; font-size: 75px; color: #f38993; text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0, 0, 0, 0.2); margin-block-start: 0.4em; margin-block-end: 0.4em; }
+body h1 { font-family: 'goodlife-brush', 'Poppins', sans-serif; font-size: 70px; color: #f38993; text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0, 0, 0, 0.2); margin-block-start: 0.4em; margin-block-end: 0.4em; }
+
+@media only screen and (min-width: 1300px) { body h1 { font-size: 75px; } }
 
 .hero-container { width: 100%; }
 
@@ -12,13 +14,13 @@ body h1 { font-family: 'goodlife-brush', 'Poppins', sans-serif; font-size: 75px;
 
 .hero-container img { width: 100%; }
 
-.characters-section h1 { margin: 20px; width: 100%; text-align: center; }
+.characters-section h1 { width: 100%; text-align: center; }
 
 .characters-row { display: flex; justify-content: center; width: 99%; flex-wrap: wrap; margin: auto; }
 
 @media only screen and (min-width: 640px) { .characters-row > div { flex: 0 50%; justify-content: space-around; } }
 
-@media only screen and (min-width: 1200px) { .characters-row { flex-wrap: nowrap; justify-content: space-evenly; } }
+@media only screen and (min-width: 1300px) { .characters-row { flex-wrap: nowrap; justify-content: space-evenly; } }
 
 .characters-row .small-image { width: 300px; background: white; padding: 10px 10px 40px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); }
 
@@ -34,7 +36,7 @@ nav#menu .menu-menu-1-container ul { list-style: none; display: flex; flex-direc
 
 .single-character { width: 95%; margin: auto; }
 
-@media only screen and (min-width: 1200px) { .single-character { width: 60%; } }
+@media only screen and (min-width: 1300px) { .single-character { width: 60%; } }
 
 .single-character .character-name { background: #82a2a3; }
 
@@ -42,15 +44,15 @@ nav#menu .menu-menu-1-container ul { list-style: none; display: flex; flex-direc
 
 @media only screen and (min-width: 640px) { .single-character .character-name .top-angle { width: 100%; transform: rotate(-5deg); } }
 
-@media only screen and (min-width: 1200px) { .single-character .character-name .top-angle { transform: rotate(-15deg); } }
+@media only screen and (min-width: 1300px) { .single-character .character-name .top-angle { transform: rotate(-15deg); } }
 
 .single-character img { width: 358px; background: white; border: 1px solid black; padding: 10px 10px 40px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); }
 
 .single-character .character-bio { width: 100%; }
 
-@media only screen and (min-width: 1200px) { .single-character .character-bio { display: flex; } }
+@media only screen and (min-width: 1300px) { .single-character .character-bio { display: flex; } }
 
-@media only screen and (min-width: 1200px) { .single-character .character-info { margin-left: 20px; } }
+@media only screen and (min-width: 1300px) { .single-character .character-info { margin-left: 20px; } }
 
 .single-character .character-info h4 { text-decoration: underline; font-weight: bold; margin-block-start: 0.0em; margin-block-end: 0.0em; }
 
