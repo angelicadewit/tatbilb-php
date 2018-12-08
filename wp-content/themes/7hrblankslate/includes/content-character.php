@@ -1,19 +1,23 @@
 <section class="single-character">
 
-    <div>
+    <div class="character-name">
+        <div class="top-angle"></div>
         <h2><?php the_field('character_name') ?></h2>
-        <h3><?php the_field('actor_name') ?></h3>
+        <h3>Portrayed by: <?php the_field('actor_name') ?></h3>
     </div>
 
-    <div>
-        <img src="<?php the_field('actor_image')?>" alt="">
-    </div>
 
-    <div>
-        <p>About the character:</p>
-        <p><?php the_field('blurb') ?></p>
+    <div class="character-bio">
+        <div>
+            <img src="<?php the_field('actor_image')?>" alt="">
+        </div>
 
-        <p>About the actor:</p>
-        <p><?php the_field('actor_bio') ?></p>
+        <div class="character-info">
+            <h4>About the character:</h4>
+            <p><?php the_field('blurb') ?></p>
+
+            <h4>About the actor:</h4>
+            <p><?php the_field('actor_bio') ?></p>
+        </div>
     </div>
 </section>

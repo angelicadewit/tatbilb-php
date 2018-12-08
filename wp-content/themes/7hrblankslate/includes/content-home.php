@@ -1,7 +1,8 @@
 <section id="home">
     <div class="container">
-        <div class="hero-container">
-            <img src="<?php echo get_template_directory_uri()?>/images/heroimage.jpg" alt="image">
-        </div>
+        <picture class="hero-container">
+            <source media="(min-width: 480px)" srcset="<?php echo get_template_directory_uri()?>/images/heroimage.jpg">    
+            <img src="<?php echo get_template_directory_uri()?>/images/heromobile.jpg" alt="image">
+        </picture>
     </div>
 </section>
