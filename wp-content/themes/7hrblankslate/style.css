@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Poppins|Roboto");
 @import url("https://use.typekit.net/phh5zva.css");
 @font-face { font-family: 'HaveHeartOne'; src: url("fonts/HaveHeartOne.ttf") format("truetype"), url("fonts/HaveHeartOne.woff") format("woff"), url("fonts/HaveHeartOne.woff2") format("woff2"); font-weight: normal; font-style: normal; }
 
-body { background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png"); background-color: #305c4f; color: white; font-family: 'Poppins', sans-serif; margin: 0; padding: 0; height: 100%; }
+body { background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png"); background-color: #305c4f; color: white; font-family: 'Poppins', sans-serif; margin: 0; padding: 0; height: 100%; font-size: 1.2em; }
 
 body h1 { font-family: 'goodlife-brush', 'Poppins', sans-serif; font-size: 70px; color: #f38993; text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0, 0, 0, 0.2); margin-block-start: 0.4em; margin-block-end: 0.4em; }
 
@@ -26,7 +26,7 @@ body h1 { font-family: 'goodlife-brush', 'Poppins', sans-serif; font-size: 70px;
 
 .characters-row .small-image img, .books-row .small-image img { width: 100%; }
 
-nav#menu .menu-menu-1-container ul { list-style: none; display: flex; flex-direction: row; }
+nav#menu .menu-menu-1-container ul { list-style: none; display: flex; flex-direction: row; font-family: "Roboto", sans-serif; }
 
 .character { display: flex; margin-bottom: 30px; }
 
@@ -78,26 +78,38 @@ nav#menu .menu-menu-1-container ul { list-style: none; display: flex; flex-direc
 
 .single-book { width: 95%; margin: auto; }
 
+@media only screen and (min-width: 640px) { .single-book { width: 80%; } }
+
 @media only screen and (min-width: 1300px) { .single-book { width: 60%; } }
 
-.single-book .book-content { width: 100%; padding: 40px; }
+.single-book .book-content { padding: 15px; }
+
+@media only screen and (min-width: 640px) { .single-book .book-content { padding: 40px; } }
 
 @media only screen and (min-width: 1300px) { .single-book .book-content { display: flex; } }
 
-@media only screen and (min-width: 1300px) { .single-book .character-info { margin-left: 20px; } }
-
-.single-book .character-info h4 { text-decoration: underline; font-weight: bold; margin-block-start: 0.0em; margin-block-end: 0.0em; }
-
 .single-book h2 { font-family: 'goodlife-brush', 'Poppins', sans-serif; color: #f38993; font-size: 60px; text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0, 0, 0, 0.2); text-align: center; margin-block-start: 0.0em; margin-block-end: 0.0em; position: relative; padding: 20px 20px 0px; z-index: 2; }
 
-.single-book .top-angle { position: absolute; left: -1%; width: 102%; height: 40px; background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png"); background-color: #305c4f; transform: rotate(10deg); z-index: 1; }
+.single-book .top-angle { display: none; }
 
-@media only screen and (min-width: 640px) { .single-book .top-angle { width: 90%; transform: rotate(5deg); } }
+@media only screen and (min-width: 640px) { .single-book .top-angle { position: absolute; width: 110%; height: 40px; background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png"); background-color: #305c4f; display: inline; z-index: 1; transform: rotate(5deg); } }
 
-@media only screen and (min-width: 1300px) { .single-book .top-angle { transform: rotate(15deg); } }
+@media only screen and (min-width: 1300px) { .single-book .top-angle { transform: rotate(15deg); bottom: 50%; } }
 
-.single-book img { z-index: 2; }
+.single-book img { z-index: 2; width: 100%; }
 
-.single-book .book-info { z-index: 2; background: rgba(255, 255, 255, 0.7); color: black; margin-left: 20px; }
+@media only screen and (min-width: 640px) { .single-book img { width: 80%; } }
 
-.single-book .book-info p { padding: 0px 10px; }
+.single-book .book-info { z-index: 2; background: rgba(255, 255, 255, 0.7); color: black; flex-direction: column; padding: 5px; display: flex; }
+
+@media only screen and (min-width: 1300px) { .single-book .book-info { margin-left: 20px; } }
+
+.single-book .book-info h4 { text-decoration: underline; font-weight: bold; margin-block-start: 0.0em; margin-block-end: 0.0em; }
+
+.single-book .book-info .buttons { align-self: flex-start; margin-top: auto; margin-bottom: 30px; }
+
+.single-book .button { -moz-box-shadow: inset 0px 1px 0px 0px #efdcfb; -webkit-box-shadow: inset 0px 1px 0px 0px #efdcfb; box-shadow: inset 0px 1px 0px 0px #efdcfb; background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfbdfa), color-stop(1, #bc80ea)); background: -moz-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%); background: -webkit-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%); background: -o-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%); background: -ms-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%); background: linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfbdfa', endColorstr='#bc80ea',GradientType=0); background-color: #dfbdfa; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; border: 1px solid #c584f3; display: inline-block; cursor: pointer; color: #ffffff; font-family: 'Roboto'; font-size: 20px; font-weight: bold; padding: 6px 24px; text-decoration: none; text-shadow: 0px 1px 0px #9752cc; }
+
+.single-book .button:hover { background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc80ea), color-stop(1, #dfbdfa)); background: -moz-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%); background: -webkit-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%); background: -o-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%); background: -ms-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%); background: linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc80ea', endColorstr='#dfbdfa',GradientType=0); background-color: #bc80ea; }
+
+.single-book .button:active { position: relative; top: 1px; }
