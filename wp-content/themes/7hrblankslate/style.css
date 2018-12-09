@@ -113,3 +113,7 @@ nav#menu .menu-menu-1-container ul { list-style: none; display: flex; flex-direc
 .single-book .button:hover { background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc80ea), color-stop(1, #dfbdfa)); background: -moz-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%); background: -webkit-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%); background: -o-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%); background: -ms-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%); background: linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc80ea', endColorstr='#dfbdfa',GradientType=0); background-color: #bc80ea; }
 
 .single-book .button:active { position: relative; top: 1px; }
+
+.trailer { position: relative; overflow: hidden; padding-top: 56.25%; display: flex; flex-direction: row; }
+
+.trailer iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; justify-content: center; }

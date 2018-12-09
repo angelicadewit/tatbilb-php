@@ -21,7 +21,7 @@
                     <a href="<?php the_field('barnes_and_noble_link')?>" class="button">Barnes and Noble</a>
                 
                 </div>
-
+    
                 
             </div>
         </div>
