@@ -3,12 +3,20 @@
     <div class="book">
         <h2><?php the_field('book_title') ?></h2>
 
-        <img src="<?php the_field('book_image')?>" alt="">
+        <div class="top-angle"></div>
+        <div class="book-content"  style="background: url(<?php the_field('bookbg')?>)">
 
-        <p><?php the_field('plot')?></p>
+            <img src="<?php the_field('book_image')?>" alt="">
 
-        <p><a href="<?php the_field('amazon_link')?>">Amazon</a></p>
-        <p><a href="<?php the_field('barnes_and_noble_link')?>">Barnes and Noble</a></p>
+
+
+            <div class="book-info">
+                <p><?php the_field('plot')?></p>
+
+                <p><a href="<?php the_field('amazon_link')?>">Amazon</a></p>
+                <p><a href="<?php the_field('barnes_and_noble_link')?>">Barnes and Noble</a></p>
+            </div>
+        </div>
     </div>
     
 </section>

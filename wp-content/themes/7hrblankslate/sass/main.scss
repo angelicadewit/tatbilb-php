@@ -152,7 +152,10 @@ nav#menu{
         width: 60%;
     }
     .character-name{
-        background: #82a2a3;
+        background-color: #82a2a3;
+        background-image: url("https://www.transparenttextures.com/patterns/gray-floral.png");
+
+        
         
 
         .top-angle{
@@ -231,8 +234,18 @@ nav#menu{
 
 .books-row{
 
+    
+
     @include tablet{
         
+        & > div {
+            flex: 0 50%;
+            justify-content: space-around;
+            align-items: baseline;
+        }
+    }
+
+    @include desktop{
         & > div {
             flex: 0 25%;
             justify-content: space-around;
@@ -244,6 +257,7 @@ nav#menu{
 
 .book-home{
 
+    margin: 20px 0px;
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -261,5 +275,85 @@ nav#menu{
 
     &:nth-child(2){
         transform: rotate(-2.2deg);
+    }
+}
+
+.single-book{
+    width: 95%;
+    margin: auto;
+
+    @include desktop{
+        width: 60%;
+    }
+
+    .book-content{
+        width: 100%;
+        padding: 40px;
+        
+        @include desktop{
+            display: flex;
+        }
+    }
+    
+    .character-info{
+
+        @include desktop{
+            margin-left: 20px;
+        }
+    
+        h4{
+            text-decoration: underline;
+            font-weight: bold;
+            margin-block-start: 0.0em;
+            margin-block-end: 0.0em;
+        } 
+    }
+
+    h2{
+        font-family: 'goodlife-brush', 'Poppins', sans-serif;
+        color: #f38993;
+        font-size: 60px;
+        text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
+        text-align: center;
+        margin-block-start: 0.0em;
+        margin-block-end: 0.0em;
+        position: relative;
+        padding: 20px 20px 0px;
+        z-index: 2;
+    }
+
+    .top-angle{
+        position: absolute;
+        left: -1%;
+        width: 102%;
+        height: 40px;
+        background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
+        background-color: #305c4f;
+        transform: rotate(10deg);
+        z-index: 1;
+
+        @include tablet{
+            width: 90%;
+            transform: rotate(5deg);
+        }
+
+        @include desktop{
+            transform: rotate(15deg);
+        }
+    }
+    
+    img{
+        z-index: 2;
+    }
+
+    .book-info{
+        z-index: 2;
+        background: rgba(255,255,255, 0.7);
+        color: black;
+        margin-left: 20px;
+
+        p{
+            padding: 0px 10px;
+        }
     }
 }

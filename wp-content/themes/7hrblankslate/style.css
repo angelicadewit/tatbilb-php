@@ -42,7 +42,7 @@ nav#menu .menu-menu-1-container ul { list-style: none; display: flex; flex-direc
 
 @media only screen and (min-width: 1300px) { .single-character { width: 60%; } }
 
-.single-character .character-name { background: #82a2a3; }
+.single-character .character-name { background-color: #82a2a3; background-image: url("https://www.transparenttextures.com/patterns/gray-floral.png"); }
 
 .single-character .character-name .top-angle { position: absolute; left: -1%; width: 102%; height: 42px; background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png"); background-color: #305c4f; transform: rotate(-10deg); }
 
@@ -64,12 +64,40 @@ nav#menu .menu-menu-1-container ul { list-style: none; display: flex; flex-direc
 
 .single-character h3 { color: black; text-align: center; padding-bottom: 20px; }
 
-@media only screen and (min-width: 640px) { .books-row > div { flex: 0 25%; justify-content: space-around; align-items: baseline; } }
+@media only screen and (min-width: 640px) { .books-row > div { flex: 0 50%; justify-content: space-around; align-items: baseline; } }
 
-.book-home { display: flex; justify-content: center; padding: 20px; }
+@media only screen and (min-width: 1300px) { .books-row > div { flex: 0 25%; justify-content: space-around; align-items: baseline; } }
+
+.book-home { margin: 20px 0px; display: flex; justify-content: center; padding: 20px; }
 
 .book-home a { color: #f38993; text-decoration: none; transition: 0.2s; }
 
 .book-home a:hover { text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0, 0, 0, 0.2); cursor: pointer; }
 
 .book-home:nth-child(2) { transform: rotate(-2.2deg); }
+
+.single-book { width: 95%; margin: auto; }
+
+@media only screen and (min-width: 1300px) { .single-book { width: 60%; } }
+
+.single-book .book-content { width: 100%; padding: 40px; }
+
+@media only screen and (min-width: 1300px) { .single-book .book-content { display: flex; } }
+
+@media only screen and (min-width: 1300px) { .single-book .character-info { margin-left: 20px; } }
+
+.single-book .character-info h4 { text-decoration: underline; font-weight: bold; margin-block-start: 0.0em; margin-block-end: 0.0em; }
+
+.single-book h2 { font-family: 'goodlife-brush', 'Poppins', sans-serif; color: #f38993; font-size: 60px; text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0, 0, 0, 0.2); text-align: center; margin-block-start: 0.0em; margin-block-end: 0.0em; position: relative; padding: 20px 20px 0px; z-index: 2; }
+
+.single-book .top-angle { position: absolute; left: -1%; width: 102%; height: 40px; background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png"); background-color: #305c4f; transform: rotate(10deg); z-index: 1; }
+
+@media only screen and (min-width: 640px) { .single-book .top-angle { width: 90%; transform: rotate(5deg); } }
+
+@media only screen and (min-width: 1300px) { .single-book .top-angle { transform: rotate(15deg); } }
+
+.single-book img { z-index: 2; }
+
+.single-book .book-info { z-index: 2; background: rgba(255, 255, 255, 0.7); color: black; margin-left: 20px; }
+
+.single-book .book-info p { padding: 0px 10px; }
