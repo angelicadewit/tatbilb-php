@@ -109,6 +109,35 @@ nav#menu{
         display: flex;
         flex-direction: row; 
         font-family: "Roboto", sans-serif;
+        background: #195243;
+
+        li{
+
+            @include tablet{
+                padding: 5px 20px;
+
+                &:first-child{
+                    margin-left: 30px;
+                }
+            }
+        }
+
+        a{
+            font-size: 25px;
+            padding: 20px;
+            color: #f38993;
+            text-decoration: none;
+            transition: 0.2s;
+
+            @include tablet{
+                padding: 30px 30px;
+            }
+
+            &:hover{
+                text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
+                cursor: pointer;
+            }
+        }
     }
     
 }
@@ -437,7 +466,7 @@ nav#menu{
 }
 
 .movie-info{
-
+    width: 85%;
     margin: auto;
 
     p{
@@ -447,9 +476,9 @@ nav#menu{
         &.tag{
             text-decoration: underline;
         }
-    }
 
-    @include desktop{
-        width: 85%;  
+        &:last-child{
+            margin-bottom: 50px;    
+        }
     }
 }

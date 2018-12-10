@@ -26,7 +26,16 @@ body h1 { font-family: 'goodlife-brush', 'Poppins', sans-serif; font-size: 70px;
 
 .characters-row .small-image img, .books-row .small-image img { width: 100%; }
 
-nav#menu .menu-menu-1-container ul { list-style: none; display: flex; flex-direction: row; font-family: "Roboto", sans-serif; }
+nav#menu .menu-menu-1-container ul { list-style: none; display: flex; flex-direction: row; font-family: "Roboto", sans-serif; background: #195243; }
+
+@media only screen and (min-width: 640px) { nav#menu .menu-menu-1-container ul li { padding: 5px 20px; }
+  nav#menu .menu-menu-1-container ul li:first-child { margin-left: 30px; } }
+
+nav#menu .menu-menu-1-container ul a { font-size: 25px; padding: 20px; color: #f38993; text-decoration: none; transition: 0.2s; }
+
+@media only screen and (min-width: 640px) { nav#menu .menu-menu-1-container ul a { padding: 30px 30px; } }
+
+nav#menu .menu-menu-1-container ul a:hover { text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0, 0, 0, 0.2); cursor: pointer; }
 
 .character { display: flex; margin-bottom: 30px; }
 
@@ -118,10 +127,10 @@ nav#menu .menu-menu-1-container ul { list-style: none; display: flex; flex-direc
 
 .trailer iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; justify-content: center; }
 
-.movie-info { margin: auto; }
+.movie-info { width: 85%; margin: auto; }
 
 .movie-info p { font-size: 15px; line-height: 1em; }
 
 .movie-info p.tag { text-decoration: underline; }
 
-@media only screen and (min-width: 1300px) { .movie-info { width: 85%; } }
+.movie-info p:last-child { margin-bottom: 50px; }
