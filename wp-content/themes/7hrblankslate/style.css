@@ -18,7 +18,7 @@ body h1 { font-family: 'goodlife-brush', 'Poppins', sans-serif; font-size: 70px;
 
 .characters-row, .books-row { display: flex; justify-content: center; width: 99%; flex-wrap: wrap; margin: auto; }
 
-@media only screen and (min-width: 640px) { .characters-row > div, .books-row > div { flex: 0 50%; justify-content: space-around; } }
+@media only screen and (min-width: 640px) { .characters-row > div, .books-row > div { flex: 1 0 21%; justify-content: space-around; } }
 
 @media only screen and (min-width: 1300px) { .characters-row, .books-row { flex-wrap: nowrap; justify-content: space-evenly; } }
 
@@ -66,7 +66,7 @@ nav#menu .menu-menu-1-container ul { list-style: none; display: flex; flex-direc
 
 @media only screen and (min-width: 640px) { .books-row > div { flex: 0 50%; justify-content: space-around; align-items: baseline; } }
 
-@media only screen and (min-width: 1300px) { .books-row > div { flex: 0 25%; justify-content: space-around; align-items: baseline; } }
+@media only screen and (min-width: 1300px) { .books-row > div { flex: 0 20%; } }
 
 .book-home { margin: 20px 0px; display: flex; justify-content: center; padding: 20px; }
 
@@ -117,3 +117,11 @@ nav#menu .menu-menu-1-container ul { list-style: none; display: flex; flex-direc
 .trailer { position: relative; overflow: hidden; padding-top: 56.25%; display: flex; flex-direction: row; }
 
 .trailer iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; justify-content: center; }
+
+.movie-info { margin: auto; }
+
+.movie-info p { font-size: 15px; line-height: 1em; }
+
+.movie-info p.tag { text-decoration: underline; }
+
+@media only screen and (min-width: 1300px) { .movie-info { width: 85%; } }

@@ -80,7 +80,7 @@ body{
     @include tablet{
         
         & > div {
-            flex: 0 50%;
+            flex: 1 0 21%;
             justify-content: space-around;
         }
     }
@@ -236,8 +236,6 @@ nav#menu{
 
 .books-row{
 
-    
-
     @include tablet{
         
         & > div {
@@ -249,9 +247,7 @@ nav#menu{
 
     @include desktop{
         & > div {
-            flex: 0 25%;
-            justify-content: space-around;
-            align-items: baseline;
+            flex: 0 20%;
         }
     }
 
@@ -440,3 +436,20 @@ nav#menu{
     }
 }
 
+.movie-info{
+
+    margin: auto;
+
+    p{
+        font-size: 15px;
+        line-height: 1em;
+
+        &.tag{
+            text-decoration: underline;
+        }
+    }
+
+    @include desktop{
+        width: 85%;  
+    }
+}

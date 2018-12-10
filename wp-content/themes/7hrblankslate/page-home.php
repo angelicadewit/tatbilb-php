@@ -12,4 +12,8 @@
 
 <?php echo get_template_part('includes/content', 'books') ?>
 
+<?php echo get_template_part('includes/content', 'movieinfo') ?>
+
+<?php echo get_template_part('includes/content', 'specialannoucement') ?>
+
 <?php get_footer(); ?>
