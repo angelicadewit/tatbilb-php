@@ -51,7 +51,9 @@ function blankslate_custom_pings( $comment )
 {
 $GLOBALS['comment'] = $comment;
 ?>
+
 <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>"><?php echo comment_author_link(); ?></li>
+
 <?php 
 }
 add_filter( 'get_comments_number', 'blankslate_comments_number' );
@@ -66,6 +68,8 @@ return $count;
 }
 }
 
-?>
 
-<?php require get_template_directory() . '/functions/enqueues.php';?>
+
+
+require get_template_directory() . '/functions/enqueues.php';
+

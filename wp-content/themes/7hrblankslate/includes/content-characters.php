@@ -15,8 +15,8 @@
     
             <div class="character">
                 <a href="<?php the_permalink() ?>">
-                    <h2 class="character-link"><?php the_field('character_name') ?></h2>
-                    <div class="small-image">
+                    <h2 class="character-link"><?php the_field('header_info') ?></h2>
+                    <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-reverse="true" data-tilt-scale="1.1" class="small-image">
                         <img src="<?php the_field('actor_image')?>" alt="">
                     </div>
                 </a>

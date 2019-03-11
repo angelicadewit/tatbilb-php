@@ -37,5 +37,3 @@
 
     }
     add_action( 'init', 'music_genre_taxonomy', 0 );
-
-?>

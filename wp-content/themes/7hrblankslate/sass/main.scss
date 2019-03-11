@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins|Roboto');
 @import url("https://use.typekit.net/phh5zva.css");
 
-$tablet-breakpoint: 640px;
-$desktop-breakpoint: 1300px;
+$tablet-breakpoint: 700px;
+$desktop-breakpoint: 1370px;
 
 
 @mixin tablet{
@@ -18,153 +18,162 @@ $desktop-breakpoint: 1300px;
 }
 
 @font-face {
-    font-family: 'HaveHeartOne';
-    src:url('fonts/HaveHeartOne.ttf') format('truetype'), url('fonts/HaveHeartOne.woff') format('woff'),url('fonts/HaveHeartOne.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'HaveHeartOne';
+	src:url('fonts/HaveHeartOne.ttf') format('truetype'), url('fonts/HaveHeartOne.woff') format('woff'),url('fonts/HaveHeartOne.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
 
 body{
-    background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
-    background-color: #305c4f;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    margin:0;
-    padding:0;
-    height: 100%;
-    font-size: 1.2em;
+	background-image: url("http://www.transparenttextures.com/patterns/crisp-paper-ruffles.png");
+	background-color: #305c4f;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	margin:0;
+	padding:0;
+	height: 100%;
+	font-size: 1.2em;
 
 
-    h1{
-        font-family: 'goodlife-brush', 'Poppins', sans-serif;
-        font-size: 70px;
-        color: #f38993;
-        text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
-        margin-block-start: 0.4em;
-        margin-block-end: 0.4em;
+	h1{
+		font-family: 'goodlife-brush', 'Poppins', sans-serif;
+		font-size: 70px;
+		color: #f38993;
+		text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20), 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20), 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
+		margin-block-start: 0.4em;
+		margin-block-end: 0.4em;
+		background: url("images/floralborder.png") repeat-x;
+		background-position-y: 100%;
 
-        @include desktop{
-            font-size: 75px;
-        }
-    }
+		@include desktop{
+			font-size: 75px;
+		}
+	}
 }
 
 
 .hero-container{
-    width: 100%;
+	width: 100%;
 
-    picture{
-        height: 100vh;
-    }
+	picture{
+		height: 100vh;
+	}
 
-    img{
-        width: 100%;
-    }
+	img{
+		width: 100%;
+	}
 }
 
 .characters-section, .books-section{
-    h1{
-        width: 100%;
-        text-align: center;
-    }
+
+	margin: 0 auto;
+	h1{
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .characters-row, .books-row{
+	width: 99%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	
+	@include tablet{
+		flex-wrap: wrap;
+		justify-content: space-around;
+		
+		& > div {
+			flex: 1 0 35%;
+		}
+	}
 
-    display: flex;
-    justify-content: center;
-    width: 99%;
-    flex-wrap: wrap;
-    margin: auto;
+	@include desktop{
+		justify-content: space-around;
 
-    @include tablet{
-        
-        & > div {
-            flex: 1 0 21%;
-            justify-content: space-around;
-        }
-    }
+		& > div {
+			flex: 1 0 20%;
+		}
+	}
 
-    @include desktop{
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
-    }
+	.small-image{
+		width: 300px;
+		background: white;
+		padding: 10px 10px 40px;
+		box-shadow: 0 5px 10px rgba(0,0,0,.5);
 
-    .small-image{
-        width: 300px;
-        background: white;
-        padding: 10px 10px 40px;
-        box-shadow: 0 5px 10px rgba(0,0,0,.5);
-
-        img{
-            width: 100%;
-        }
-    }
+		img{
+			width: 100%;
+		}
+	}
 }
 
 nav#menu{
 
-    .menu-menu-1-container ul {
-        list-style: none;
-        display: flex;
-        flex-direction: row; 
-        font-family: "Roboto", sans-serif;
-        background: #195243;
+	.menu-menu-1-container ul {
+		list-style: none;
+		display: flex;
+		flex-direction: row; 
+		font-family: "Roboto", sans-serif;
+		background: #195243;
 
-        li{
+		li{
 
-            @include tablet{
-                padding: 5px 20px;
+			@include tablet{
+				padding: 5px 20px;
 
-                &:first-child{
-                    margin-left: 30px;
-                }
-            }
-        }
+				&:first-child{
+					margin-left: 30px;
+				}
+			}
+		}
 
-        a{
-            font-size: 25px;
-            padding: 20px;
-            color: #f38993;
-            text-decoration: none;
-            transition: 0.2s;
+		a{
+			font-size: 25px;
+			padding: 20px;
+			color: #f38993;
+			text-decoration: none;
+			transition: 0.2s;
 
-            @include tablet{
-                padding: 30px 30px;
-            }
+			@include tablet{
+				padding: 30px 30px;
+			}
 
-            &:hover{
-                text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
-                cursor: pointer;
-            }
-        }
-    }
-    
+			&:hover{
+				text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
+				cursor: pointer;
+			}
+		}
+	}
+	
 }
 
 .character{
-    display: flex; 
-    margin-bottom: 30px;
+	display: flex; 
+	margin-bottom: 30px;
+	justify-content: center;
+	width: 60%;
 
-    &:nth-child(2){
-        transform: rotate(2.2deg);
-    }
+	&:nth-child(2){
+		transform: rotate(2.2deg);
+	}
 
-    &:nth-child(4){
-        transform: rotate(-4deg);
-    }
+	&:nth-child(4){
+		transform: rotate(-4deg);
+	}
 
 
-    a{
-        color: #f38993;
-        text-decoration: none;
-        transition: 0.2s;
+	a{
+		color: #f38993;
+		text-decoration: none;
+		transition: 0.2s;
 
-        &:hover{
-            text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
-            cursor: pointer;
-        }
-    }
+		&:hover{
+			text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
+			cursor: pointer;
+		}
+	}
 
 //     @include tablet{
 //         flex: 2
@@ -176,309 +185,300 @@ nav#menu{
 }
 
 .single-character{
-    width: 95%;
-    margin: auto;
+	margin: auto;
 
-    @include desktop{
-        width: 60%;
-    }
-    .character-name{
-        background-color: #82a2a3;
-        background-image: url("https://www.transparenttextures.com/patterns/gray-floral.png");
+	@include desktop{
+		width: 60%;
+	}
+	.character-name{
+		background-color: #82a2a3;
+		background-image: url("https://www.transparenttextures.com/patterns/gray-floral.png");
+		border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+		border: dashed 5px black;
+		margin-bottom: 2%;
+	}
 
-        
-        
-
-        .top-angle{
-            position: absolute;
-            left: -1%;
-            width: 102%;
-            height: 42px;
-            background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
-            background-color: #305c4f;
-            transform: rotate(-10deg);
-
-            @include tablet{
-                width: 100%;
-                transform: rotate(-5deg);
-            }
-
-            @include desktop{
-                transform: rotate(-15deg);
-            }
-        }
-    }
-
-    img{
-    
-        width: 358px;  
-        background: white;
-        border: 1px solid black;
-        padding: 10px 10px 40px;
-        box-shadow: 0 5px 10px rgba(0,0,0,.5);
-        transform: rotate(2.2deg);
-        }
+	img{
+	
+		width: 358px;  
+		background: white;
+		border: 1px solid black;
+		padding: 10px 10px 40px;
+		box-shadow: 0 5px 10px rgba(0,0,0,.5);
+		transform: rotate(2.2deg);
+		}
 
 
-    .character-bio{
-        width: 100%;
-        
-        @include desktop{
-            display: flex;
-        }
-    }
-    
-    .character-info{
+	.character-bio{
+		width: 100%;
+		
+		@include desktop{
+			display: flex;
+		}
+	}
+	
+	.character-info{
 
-        @include desktop{
-            margin-left: 20px;
-        }
-    
-        h4{
-            text-decoration: underline;
-            font-weight: bold;
-            margin-block-start: 0.0em;
-            margin-block-end: 0.0em;
-        } 
-    }
+		@include desktop{
+			margin-left: 20px;
+		}
+	
+		h4{
+			text-decoration: underline;
+			font-weight: bold;
+			margin-block-start: 0.0em;
+			margin-block-end: 0.0em;
+		} 
+	}
 
-    h2{
-        font-family: 'goodlife-brush', 'Poppins', sans-serif;
-        color: #f38993;
-        font-size: 60px;
-        text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
-        text-align: center;
-        margin-block-start: 0.0em;
-        margin-block-end: 0.0em;
-        position: relative;
-        padding: 20px;
-    }
+	h2{
+		font-family: 'goodlife-brush', 'Poppins', sans-serif;
+		color: #f38993;
+		font-size: 60px;
+		text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
+		text-align: center;
+		margin-block-start: 0.0em;
+		margin-block-end: 0.0em;
+		position: relative;
+		padding: 20px;
+	}
 
 
-    h3{
-        color: black;
-        text-align: center;
-        padding-bottom: 20px;
-    }
-    
+	h3{
+		color: black;
+		text-align: center;
+		padding-bottom: 20px;
+	}
+	
 }
 
 .books-row{
+		
+		& > div {
+			flex: 0 50%;
+			justify-content: space-around;
+			align-items: baseline;
+		}
 
-    @include tablet{
-        
-        & > div {
-            flex: 0 50%;
-            justify-content: space-around;
-            align-items: baseline;
-        }
-    }
-
-    @include desktop{
-        & > div {
-            flex: 0 20%;
-        }
-    }
+	@include desktop{
+		& > div {
+			flex: 0 20%;
+		}
+	}
 
 }
 
 .book-home{
 
-    margin: 20px 0px;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+	margin: 20px 0px;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
+	width: 50%;
+	
 
-    a{
-        color: #f38993;
-        text-decoration: none;
-        transition: 0.2s;
+	a{
+		color: #f38993;
+		text-decoration: none;
+		transition: 0.2s;
 
-        &:hover{
-            text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
-            cursor: pointer;
-        }
-    }
+		&:hover{
+			text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
+			cursor: pointer;
+		}
+	}
 
-    &:nth-child(2){
-        transform: rotate(-2.2deg);
-    }
+	&:nth-child(2){
+		transform: rotate(-2.2deg);
+	}
+
+	img{
+		transform: translateZ(40px);
+	}
+}
+
+.book{
+	display: flex;
+	justify-content: center;
 }
 
 .single-book{
-    width: 95%;
-    margin: auto;
+	width: 95%;
+	margin: auto;
+	
 
-    @include tablet{
-        width:80%;
-    }
+	@include tablet{
+		width:80%;
+	}
 
-    @include desktop{
-        width:60%;
-    }
+	@include desktop{
+		width:60%;
+	}
 
-    .book-content{
+	.book-content{
+		padding: 15px;
 
-        padding: 15px;
+		@include tablet{
+			padding: 40px;
+			
+		}
+		
+		@include desktop{
+			display: flex;
+		}   
+	}
+	
 
-        @include tablet{
-            padding: 40px;
-            
-        }
-        
-        @include desktop{
-            display: flex;
-        }   
-    }
-    
+	h2{
+		font-family: 'goodlife-brush', 'Poppins', sans-serif;
+		color: #f38993;
+		font-size: 60px;
+		text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
+		text-align: center;
+		margin-block-start: 0.0em;
+		margin-block-end: 0.0em;
+		position: relative;
+		padding: 20px 20px 0px;
+		z-index: 2;
+		width: 100%;
+	}
 
-    h2{
-        font-family: 'goodlife-brush', 'Poppins', sans-serif;
-        color: #f38993;
-        font-size: 60px;
-        text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
-        text-align: center;
-        margin-block-start: 0.0em;
-        margin-block-end: 0.0em;
-        position: relative;
-        padding: 20px 20px 0px;
-        z-index: 2;
-    }
+	.top-angle{
 
-    .top-angle{
+		display: none;
 
-        display: none;
+		@include tablet{
+			position: absolute;
+			width: 110%;
+			height: 40px;
+			background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
+			background-color: #305c4f;
+			display: inline;
+			z-index: 1;
+			transform: rotate(5deg);
+		}
 
-        @include tablet{
-            position: absolute;
-            width: 110%;
-            height: 40px;
-            background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
-            background-color: #305c4f;
-            display: inline;
-            z-index: 1;
-            transform: rotate(5deg);
-        }
+		@include desktop{
+			transform: rotate(15deg);
+			bottom: 50%;
+		}
+	}
+	
+	img{
+		z-index: 2;
+		width: 100%;
 
-        @include desktop{
-            transform: rotate(15deg);
-            bottom: 50%;
-        }
-    }
-    
-    img{
-        z-index: 2;
-        width: 100%;
+		@include tablet{
+			width: 80%;
+		}
+	}
 
-        @include tablet{
-            width: 80%;
-        }
-    }
+	.book-info{
+		z-index: 2;
+		background: rgba(255,255,255, 0.7);
+		color: black;
+		flex-direction: column;
+		padding: 5px;
+		display: flex; 
 
-    .book-info{
-        z-index: 2;
-        background: rgba(255,255,255, 0.7);
-        color: black;
-        flex-direction: column;
-        padding: 5px;
-        display: flex; 
+		@include desktop{
+			margin-left: 20px;
+		}
+	
+		h4{
+			text-decoration: underline;
+			font-weight: bold;
+			margin-block-start: 0.0em;
+			margin-block-end: 0.0em;
+		} 
 
-        @include desktop{
-            margin-left: 20px;
-        }
-    
-        h4{
-            text-decoration: underline;
-            font-weight: bold;
-            margin-block-start: 0.0em;
-            margin-block-end: 0.0em;
-        } 
+		.buttons{
+			align-self: flex-start;
+			margin-top: auto;
+			margin-bottom: 30px;
+		}
+	}
 
-        .buttons{
-            align-self: flex-start;
-            margin-top: auto;
-            margin-bottom: 30px;
-        }
-    }
+	.button {
+		-moz-box-shadow:inset 0px 1px 0px 0px #efdcfb;
+		-webkit-box-shadow:inset 0px 1px 0px 0px #efdcfb;
+		box-shadow:inset 0px 1px 0px 0px #efdcfb;
+		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfbdfa), color-stop(1, #bc80ea));
+		background:-moz-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
+		background:-webkit-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
+		background:-o-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
+		background:-ms-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
+		background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfbdfa', endColorstr='#bc80ea',GradientType=0);
+		background-color:#dfbdfa;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		border-radius:6px;
+		border:1px solid #c584f3;
+		display:inline-block;
+		cursor:pointer;
+		color:#ffffff;
+		font-family:'Roboto';
+		font-size:20px;
+		font-weight:bold;
+		padding:6px 24px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #9752cc;
+	
+		&:hover {
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc80ea), color-stop(1, #dfbdfa));
+			background:-moz-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
+			background:-webkit-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
+			background:-o-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
+			background:-ms-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
+			background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc80ea', endColorstr='#dfbdfa',GradientType=0);
+			background-color:#bc80ea;
+		}
 
-    .button {
-        -moz-box-shadow:inset 0px 1px 0px 0px #efdcfb;
-        -webkit-box-shadow:inset 0px 1px 0px 0px #efdcfb;
-        box-shadow:inset 0px 1px 0px 0px #efdcfb;
-        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfbdfa), color-stop(1, #bc80ea));
-        background:-moz-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
-        background:-webkit-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
-        background:-o-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
-        background:-ms-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
-        background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
-        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfbdfa', endColorstr='#bc80ea',GradientType=0);
-        background-color:#dfbdfa;
-        -moz-border-radius:6px;
-        -webkit-border-radius:6px;
-        border-radius:6px;
-        border:1px solid #c584f3;
-        display:inline-block;
-        cursor:pointer;
-        color:#ffffff;
-        font-family:'Roboto';
-        font-size:20px;
-        font-weight:bold;
-        padding:6px 24px;
-        text-decoration:none;
-        text-shadow:0px 1px 0px #9752cc;
-    
-        &:hover {
-            background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc80ea), color-stop(1, #dfbdfa));
-            background:-moz-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
-            background:-webkit-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
-            background:-o-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
-            background:-ms-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
-            background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
-            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc80ea', endColorstr='#dfbdfa',GradientType=0);
-            background-color:#bc80ea;
-        }
-
-        &:active {
-            position:relative;
-            top:1px;
-        }
-    }   
-    
+		&:active {
+			position:relative;
+			top:1px;
+		}
+	}   
+	
 }
 
 .trailer{
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
-    display: flex;
-    flex-direction: row;
-    
+	position: relative;
+	overflow: hidden;
+	padding-top: 56.25%;
+	display: flex;
+	flex-direction: row;
+	
 
-    iframe{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-        justify-content: center;
-    }
+	iframe{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+		justify-content: center;
+	}
 }
 
 .movie-info{
-    width: 85%;
-    margin: auto;
+	width: 85%;
+	margin: auto;
 
-    p{
-        font-size: 15px;
-        line-height: 1em;
+	p{
+		font-size: 15px;
+		line-height: 1em;
 
-        &.tag{
-            text-decoration: underline;
-        }
+		&.tag{
+			text-decoration: underline;
+		}
 
-        &:last-child{
-            margin-bottom: 50px;    
-        }
-    }
+		&:last-child{
+			margin-bottom: 50px;    
+		}
+	}
 }

@@ -11,7 +11,7 @@
         $query = new WP_Query($args);
         if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
         
-        <div class="book-home" style="background: url(<?php the_field('bookbg')?>)">
+        <div data-tilt data-tilt-speed="800" data-tilt-max="20" data-tilt-reset="false" data-tilt-reverse="true" class="book-home" style="background: url(<?php the_field('bookbg')?>)">
             <a href="<?php the_permalink() ?>">
                 <img src="<?php the_field('book_image')?>" alt="">
             </a>
