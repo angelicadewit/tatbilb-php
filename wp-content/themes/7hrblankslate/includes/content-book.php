@@ -3,11 +3,11 @@
     <div class="book">
         <h2><?php the_field('book_title') ?></h2>
 
-        <div class="top-angle"></div>
         <div class="book-content"  style="background: url(<?php the_field('bookbg')?>)">
+            <div class="top-angle"></div>
 
+            
             <img src="<?php the_field('book_image')?>" alt="">
-
 
 
             <div class="book-info">

@@ -99,15 +99,13 @@ nav#menu a:hover { text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0, 0, 0, 0
 
 .book-home img { transform: translateZ(40px); }
 
-.book { display: flex; justify-content: center; }
-
 .single-book { width: 95%; margin: auto; }
 
 @media only screen and (min-width: 700px) { .single-book { width: 80%; } }
 
 @media only screen and (min-width: 1370px) { .single-book { width: 60%; } }
 
-.single-book .book-content { padding: 15px; }
+.single-book .book-content { padding: 15px; overflow: hidden; position: relative; border-radius: 255px 15px 225px 15px/15px 225px 15px 255px; border: dotted 5px #f38993; }
 
 @media only screen and (min-width: 700px) { .single-book .book-content { padding: 40px; } }
 
@@ -117,11 +115,11 @@ nav#menu a:hover { text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0, 0, 0, 0
 
 .single-book .top-angle { display: none; }
 
-@media only screen and (min-width: 700px) { .single-book .top-angle { position: absolute; width: 110%; height: 40px; background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png"); background-color: #305c4f; display: inline; z-index: 1; transform: rotate(5deg); } }
+@media only screen and (min-width: 700px) { .single-book .top-angle { position: absolute; width: 120%; height: 40px; background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png"); background-color: rgba(0, 0, 0, 0.2); display: inline; z-index: 1; transform: rotate(2deg); } }
 
-@media only screen and (min-width: 1370px) { .single-book .top-angle { transform: rotate(15deg); bottom: 50%; } }
+@media only screen and (min-width: 1370px) { .single-book .top-angle { transform: rotate(30deg); bottom: 50%; } }
 
-.single-book img { z-index: 2; width: 100%; }
+.single-book img { z-index: 2; width: 100%; align-self: center; }
 
 @media only screen and (min-width: 700px) { .single-book img { width: 80%; } }
 
