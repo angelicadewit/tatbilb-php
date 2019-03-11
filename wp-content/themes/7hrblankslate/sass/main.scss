@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700|Roboto');
 @import url("https://use.typekit.net/phh5zva.css");
 
 $tablet-breakpoint: 700px;
@@ -55,12 +55,10 @@ body{
 .hero-container{
 	width: 100%;
 
-	picture{
-		height: 100vh;
-	}
-
 	img{
 		width: 100%;
+		max-height: 80vh;
+		object-fit: cover;
 	}
 }
 
@@ -114,40 +112,89 @@ nav#menu{
 	.menu-menu-1-container ul {
 		list-style: none;
 		display: flex;
-		flex-direction: row; 
+		flex-direction: column;
 		font-family: "Roboto", sans-serif;
+		font-weight: 400;
 		background: #195243;
+		padding-inline-start: 0px;
 
-		li{
+		@include tablet{
 
-			@include tablet{
-				padding: 5px 20px;
+			flex-direction: row; 
+			flex-wrap: wrap;
+			justify-content: space-around;
+			margin-bottom: 3%;
+		}
+		
+		@include desktop{
+			height: 40px;
+			flex-wrap: nowrap;
+		}
+	}
+	
+	li{
 
-				&:first-child{
-					margin-left: 30px;
-				}
+		padding: 8px 20px;
+
+		@include tablet{
+
+			padding: 8px 10px;
+			
+			&:first-child{
+				margin-left: 30px;
 			}
 		}
 
-		a{
-			font-size: 25px;
-			padding: 20px;
-			color: #f38993;
-			text-decoration: none;
-			transition: 0.2s;
+		&.home{
+
 
 			@include tablet{
-				padding: 30px 30px;
+				width: 100%;
 			}
 
-			&:hover{
-				text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
-				cursor: pointer;
+			@include desktop{
+				width: fit-content;
+			}
+
+			a{
+				background: url(images/logo.png) no-repeat;
+				text-indent: -9999px;
+				display: block;
+				background-size: contain;
+				padding: 50px 80px;
+				position: relative;
+
+				@include tablet{
+					background-position: center;
+				}
+				
+				@include desktop{
+					margin-top: -20px;
+					padding: 30px 100px;
+				}
 			}
 		}
 	}
 	
+	a{
+		font-size: 25px;
+		padding: 20px;
+		color: #f38993;
+		text-decoration: none;
+		transition: 0.2s;
+		
+		@include tablet{
+			padding: 30px 30px;
+		}
+		
+		&:hover{
+			text-shadow: 2px 2px 0px #305c4f, 5px 4px 0px rgba(0,0,0,0.20);
+			cursor: pointer;
+		}
+	}
 }
+
+
 
 .character{
 	display: flex; 
@@ -224,10 +271,10 @@ nav#menu{
 		}
 	
 		h4{
-			text-decoration: underline;
-			font-weight: bold;
+			text-transform: uppercase;
+			font-weight: 900;
 			margin-block-start: 0.0em;
-			margin-block-end: 0.0em;
+			margin-block-end: 0.0em;;
 		} 
 	}
 
