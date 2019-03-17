@@ -513,19 +513,42 @@ nav#menu{
 }
 
 .movie-info{
-	width: 85%;
-	margin: auto;
+	width: 75%;
+	margin: 0 auto;
+	margin-top: 2%;
 
-	p{
-		font-size: 15px;
-		line-height: 1em;
+	.movie-title{
+		font-size: 2.5rem;
+	}
 
-		&.tag{
-			text-decoration: underline;
+	.movie{
+		font-size: 1rem;
+		padding: 0px 5px;
+
+		&.rating{
+			border: 1px solid white;
+			margin: 0px 5px;
+		}
+	}
+
+	.summary-and-cast{
+		display: flex;
+		align-content: flex-start;
+		margin-bottom: 3%;
+		
+		.summary{
+			width: 40%;
+			margin-right: 3%;
 		}
 
-		&:last-child{
-			margin-bottom: 50px;    
+		.starring-text{
+			color: rgb(216, 216, 216);
 		}
+	}
+
+	.netflix-logo{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 5%;
 	}
 }
